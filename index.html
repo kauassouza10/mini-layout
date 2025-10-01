@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Layout</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        const imagensDisponiveis = [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/301",
+            "https://picsum.photos/200/302",
+            "https://picsum.photos/200/303",
+            "https://picsum.photos/200/304",
+            "https://picsum.photos/200/305",
+            "https://picsum.photos/200/306",
+            "https://picsum.photos/200/307",
+            "https://picsum.photos/200/308",
+            "https://picsum.photos/200/309"
+        ];
+
+        let indicesAtuais = [0, 0, 0];
+
+        function trocarImagem(img, posicao) {
+            indicesAtuais[posicao] = (indicesAtuais[posicao] + 1) % imagensDisponiveis.length;
+            img.src = imagensDisponiveis[indicesAtuais[posicao]];
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Fotos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Sobre</li>
+            <li>Contato</li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Galeria</h2>
+        <div class="galeria">
+            <img src="https://picsum.photos/200/300" onclick="trocarImagem(this, 0)">
+            <img src="https://picsum.photos/209/300" onclick="trocarImagem(this, 1)">
+            <img src="https://picsum.photos/219/300" onclick="trocarImagem(this, 2)">
+        </div>
+
+        <h2>Conceito</h2>
+        <div class="caixa-texto">
+            O conceito de fotografia abrange a arte e a técnica de registrar imagens por meio da luz. A palavra tem
+            origem grega, combinando phōtos ("luz") e graphḗ ("escrita"), significando "escrever com luz".
+            O conceito pode ser abordado sob várias perspectivas:
+            Perspectiva técnica
+            A fotografia é o processo de fixar a imagem de um objeto ou cena em uma superfície sensível à luz (como um
+            filme fotográfico ou um sensor digital).
+            Para isso, utiliza-se uma câmera que controla a quantidade de luz que entra e por quanto tempo, usando
+            elementos como a abertura, a velocidade do obturador e o ISO.
+            Essa abordagem ressalta a importância do domínio de fatores técnicos para se obter o resultado desejado.
+            Perspectiva artística
+            A fotografia é uma forma de expressão que vai além da simples reprodução da realidade.
+            Ela permite capturar e eternizar momentos, emoções e informações de maneira visual.
+            A visão do fotógrafo, que envolve a escolha de ângulo, composição e iluminação, transforma o ato de
+            registrar em uma criação artística.
+            Perspectiva social e comunicacional
+            Como meio de comunicação, a fotografia registra visualmente fatos e histórias, influenciando percepções e
+            memórias.
+            As fotografias, seja em preto e branco ou a cores, analógicas ou digitais, são registros de um espaço e
+            tempo específicos.
+            Além disso, a fotografia lida com o seu referente, o objeto ou a cena fotografada, mas também interpreta e o
+            ressignifica através das escolhas estéticas e técnicas do fotógrafo.
+        </div>
+
+        <h2>Imagem principal</h2>
+        <div class="sticky-container">
+            <img src="https://picsum.photos/500/150" alt="Sticky">
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Rodapé fixo</p>
+    </footer>
+
+</body>
+
+</html>
